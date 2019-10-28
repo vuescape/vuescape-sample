@@ -1,0 +1,3 @@
+[submodule "packages/vuescape"]
+	path = packages/vuescape
+	url = https://github.com/vuescape/vuescape.git
