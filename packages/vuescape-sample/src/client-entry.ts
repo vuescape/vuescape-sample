@@ -10,17 +10,17 @@ const getStoreModulesToRegister = async () => {
   const menuConfiguration = (await import(/* webpackChunkName: "menuConfig" */ './menuConfig')).default
   const menuConfigurationModule = makeStoreModule(menuConfiguration)
 
-  const headerImgUrl = (await import('./component-data/CardGridSample/microsoft_logo.png')).default
+  const headerImgUrl = (await import('./images/vuescape.png')).default
   const theHeaderConfiguration = {
     toolbarStyle: 'box-shadow: 0 0 0 1px #ade3ef, 0 1px 2px 0 rgba(0, 0, 0, 0.05);',
-    logoAltText: 'CoMetrics',
+    logoAltText: 'Vuescape',
     shouldDisplayHelp: false,
     logoUrl: headerImgUrl,
     shouldShowHeader: true,
   }
   const theHeaderConfigurationModule = makeStoreModule(theHeaderConfiguration)
 
-  const footerImgUrl = (await import('./component-data/CardGridSample/microsoft_logo.png')).default
+  const footerImgUrl = (await import('./images/vuescape.png')).default
   const theFooterConfiguration = {
     copyrightName: 'Vuescape',
     logoAltText: 'Vuescape',
