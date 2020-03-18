@@ -9,7 +9,7 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 
 const config = env => {
-  const packageDirectory = resolve(`packages/${env.PACKAGE_NAME}`) 
+  const packageDirectory = resolve(`packages/${env.PACKAGE_NAME}`)
 
   return {
     context: packageDirectory,
@@ -850,7 +850,7 @@ const config = env => {
         '@vuescape': path.join(packageDirectory, '..', 'vuescape', 'src'),
       },
     },
-    devtool: 'inline-source-map',
+    devtool: process.env.NODE_ENV !== 'production' ? 'inline-source-map' : false,
     devServer: {
       contentBase: path.join(packageDirectory, 'dist'),
     },

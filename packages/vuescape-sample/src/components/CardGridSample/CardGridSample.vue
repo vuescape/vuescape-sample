@@ -1,5 +1,5 @@
 <template>
-  <card-grid :cards="cardGridData"></card-grid>
+  <card-grid :cards="cardGridData" style="margin-top: 16px;"></card-grid>
 </template>
 
 <script lang="ts">

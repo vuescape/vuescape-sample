@@ -2,8 +2,7 @@ import { VuetifyTheme } from 'vuetify'
 import Vuex from 'vuex'
 
 import { ApplicationBootstrapper, makeAuthenticatedNavigationGuard, makeRouter } from '@vuescape/infrastructure'
-import { RootState } from '@vuescape/store'
-import { RootStore } from '@vuescape/store/modules'
+import { rootStoreOptions } from '@vuescape/store/modules/Root'
 import { makeStoreModule } from '@vuescape/store/modules/types'
 
 const getStoreModulesToRegister = async () => {
@@ -59,7 +58,7 @@ const bootstrapApplication = async () => {
     const theme: Partial<VuetifyTheme> = {
       primary: '#16a5c6',
     }
-    const vuexStore = new Vuex.Store<RootState>(new RootStore())
+    const vuexStore = new Vuex.Store(rootStoreOptions)
 
     const boostrapper = new ApplicationBootstrapper()
       .withRouter(router)
