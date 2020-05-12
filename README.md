@@ -9,7 +9,8 @@ This repository contains sample code showing how to use Vuescape.
 
 1) (Fork and) Clone the repo
 2) Pull down the vuescape submodule. From the root directory: git submodule update --init
-3) To build and start the application: npm run sample:start
+3) Install dependencies by running: npm install
+4) To build and start the application: npm run sample:start
 
 If need to update to latest vuescape (e.g. if vuescape was updated and you want the latest changes): git submodule update --remote --merge
 
